@@ -2,7 +2,16 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        f1: "Space Grotesk",
+        f2: "Inter",
+      },
+      spacing: {
+        1: "76rem",
+        sp1: "30rem",
+      },
+    },
   },
   plugins: [],
 };
