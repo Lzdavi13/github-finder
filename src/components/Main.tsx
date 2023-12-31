@@ -1,16 +1,17 @@
 import { UserProps } from "../types/user";
 import { Card } from "./Card";
+import { Error } from "./Error";
 type MainProps = {
   user: UserProps | null;
-  isLoading: boolean;
+  error: boolean;
 };
 
-export function Main({ user }: MainProps) {
-  console.log(user);
+export function Main({ user, error }: MainProps) {
   return (
     <>
       <main className=" bg-zinc-900 flex flex-col justify-center items-center">
         {user && <Card {...user} />}
+        {error && <Error />}
       </main>
     </>
   );

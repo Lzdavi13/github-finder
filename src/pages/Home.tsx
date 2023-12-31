@@ -8,6 +8,7 @@ import { UserProps } from "../types/user";
 export function Home() {
   const [user, setUser] = useState<UserProps | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function getUser(userName: string): Promise<void> {
     try {
@@ -26,8 +27,9 @@ export function Home() {
       };
 
       setUser(userData);
+      setError(false);
     } catch (error) {
-      console.log(error);
+      setError(true);
     } finally {
       setIsLoading(false);
     }
@@ -36,7 +38,7 @@ export function Home() {
     <>
       <div className="w-full h-screen bg-zinc-900 flex flex-col gap-16 items-center">
         <Search getUser={getUser} />
-        <Main user={user} isLoading={isLoading} />
+        <Main user={user} error={error} />
         {isLoading && <Loader />}
       </div>
     </>
