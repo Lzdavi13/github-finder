@@ -15,7 +15,7 @@ export function Home() {
       setIsLoading(true);
       const response = await axios(`https://api.github.com/users/${userName}`);
 
-      const { avatar_url, login, location, followers, following } =
+      const { avatar_url, login, location, followers, following, html_url } =
         response.data;
 
       const userData: UserProps = {
@@ -24,6 +24,7 @@ export function Home() {
         location,
         followers,
         following,
+        html_url,
       };
 
       setUser(userData);
