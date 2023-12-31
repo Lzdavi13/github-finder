@@ -8,7 +8,6 @@ export function Card({
   followers,
   following,
 }: UserProps) {
-  console.log(login);
   return (
     <>
       <div className="flex flex-col items-center w-96 h-sp1 bg-zinc-800 border-blue-600 border-2 p-8 gap-5 rounded-lg">

@@ -1,11 +1,16 @@
 import { UserProps } from "../types/user";
 import { Card } from "./Card";
+type MainProps = {
+  user: UserProps | null;
+  isLoading: boolean;
+};
 
-export function Main({ ...user }: UserProps) {
+export function Main({ user }: MainProps) {
+  console.log(user);
   return (
     <>
       <main className=" bg-zinc-900 flex flex-col justify-center items-center">
-        {user.avatar_url && <Card {...user} />}
+        {user && <Card {...user} />}
       </main>
     </>
   );
