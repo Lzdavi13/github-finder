@@ -1,6 +1,10 @@
 import { InputSearch } from "./Input";
 
-export function Search() {
+type SearchProps = {
+  getUser: (userName: string) => Promise<void>;
+};
+
+export function Search({ getUser }: SearchProps) {
   return (
     <>
       <header className="w-full h-72 py-16 flex flex-col items-center gap-12 bg-zinc-800">
@@ -9,7 +13,7 @@ export function Search() {
         </h1>
 
         <div>
-          <InputSearch />
+          <InputSearch getUser={getUser} />
         </div>
       </header>
     </>

@@ -1,20 +1,25 @@
 import { MdLocationPin } from "react-icons/md";
+import { UserProps } from "../types/user";
 
-export function Card() {
+export function Card({
+  avatar_url,
+  login,
+  location,
+  followers,
+  following,
+}: UserProps) {
+  console.log(login);
   return (
     <>
       <div className="flex flex-col items-center w-96 h-sp1 bg-zinc-800 border-blue-600 border-2 p-8 gap-5 rounded-lg">
         <div className="rounded-full w-32 h-32 border-4 border-blue-900">
-          <img
-            src="https://avatars.githubusercontent.com/u/127680849?v=4"
-            alt=""
-          />
+          <img src={avatar_url} alt="" />
         </div>
 
-        <h2 className="font-f2 font-bold text-zinc-50 text-xl">Luiz Davi</h2>
+        <h2 className="font-f2 font-bold text-zinc-50 text-xl">{login}</h2>
         <p className=" flex items-center justify-center gap-2 text-lg font-f2 text-zinc-300 font-semibold">
           <MdLocationPin className="fill-blue-600 w-6 h-6" />
-          <span>Araioses</span>
+          <span>{location}</span>
         </p>
 
         <div className="flex gap-7">
@@ -23,7 +28,7 @@ export function Card() {
               Seguidores:
             </p>
             <p className="font-f2 text-center font-medium text-base text-zinc-50 bg-blue-500 w-24 rounded-sm">
-              837
+              {followers}
             </p>
           </div>
           <div className="flex flex-col items-center gap-2">
@@ -31,7 +36,7 @@ export function Card() {
               Seguindo:
             </p>
             <p className="font-f2 text-center font-medium text-base text-zinc-50 bg-blue-500 w-24 rounded-sm">
-              322
+              {following}
             </p>
           </div>
         </div>
