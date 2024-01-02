@@ -12,7 +12,7 @@ export default {
       },
       spacing: {
         1: "76rem",
-        sp1: "30rem",
+        sp1: "33rem",
         sp2: "50%",
       },
     },
