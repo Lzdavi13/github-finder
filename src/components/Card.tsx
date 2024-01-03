@@ -1,4 +1,5 @@
 import { MdLocationPin } from "react-icons/md";
+import { Link } from "react-router-dom";
 import { UserProps } from "../types/user";
 
 export function Card({
@@ -8,8 +9,8 @@ export function Card({
   bio,
   followers,
   following,
-  html_url,
-}: UserProps) {
+}: // html_url,
+UserProps) {
   return (
     <>
       <div className="flex flex-col items-center w-96 h-sp1 bg-zinc-800 border-blue-600 border-2 p-8 gap-4 rounded-lg">
@@ -48,13 +49,12 @@ export function Card({
             </p>
           </div>
         </div>
-        <a
-          href={html_url}
+        <Link
+          to={"/projects"}
           className="bg-blue-500 py-3 px-8 text-zinc-200 font-f2 font-medium rounded-md my-8"
-          target="_blank"
         >
           Ver Melhores Projetos
-        </a>
+        </Link>
       </div>
     </>
   );
