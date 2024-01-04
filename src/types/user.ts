@@ -5,5 +5,4 @@ export type UserProps = {
   bio: string;
   followers: string;
   following: string;
-  html_url: string;
 };

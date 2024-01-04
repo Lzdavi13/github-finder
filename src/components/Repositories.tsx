@@ -8,7 +8,6 @@ export function Repositories() {
   const { user } = useUser();
   const [repositories, setRepositories] = useState<AxiosResponse[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
 
   async function getRepositories() {
     try {
@@ -20,9 +19,8 @@ export function Repositories() {
       const arrayRepositorie = response.data.slice(0, 6);
 
       setRepositories(arrayRepositorie);
-      setError(false);
     } catch (error) {
-      setError(true);
+      console.error(error);
     } finally {
       setIsLoading(false);
     }

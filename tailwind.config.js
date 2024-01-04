@@ -11,7 +11,7 @@ export default {
         f2: "Inter",
       },
       spacing: {
-        1: "76rem",
+        sp3: "76rem",
         sp1: "33rem",
         sp2: "50%",
       },

@@ -3,10 +3,11 @@ import { useState } from "react";
 import { Loader } from "../components/Loader";
 import { Main } from "../components/Main";
 import { Search } from "../components/Search";
+import { useUser } from "../hooks/useUser";
 import { UserProps } from "../types/user";
 
 export function Home() {
-  const [user, setUser] = useState<UserProps | null>(null);
+  const { user, setUser } = useUser();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -15,15 +16,8 @@ export function Home() {
       setIsLoading(true);
       const response = await axios(`https://api.github.com/users/${userName}`);
 
-      const {
-        avatar_url,
-        login,
-        location,
-        bio,
-        followers,
-        following,
-        html_url,
-      } = response.data;
+      const { avatar_url, login, location, bio, followers, following } =
+        response.data;
 
       const userData: UserProps = {
         avatar_url,
@@ -32,7 +26,6 @@ export function Home() {
         bio,
         followers,
         following,
-        html_url,
       };
 
       setUser(userData);

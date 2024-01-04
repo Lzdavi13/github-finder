@@ -1,7 +1,7 @@
-import { Home } from "./pages/Home";
+// import { Projects } from "./pages/Projects";
 
-function App() {
-  return <Home />;
-}
+// function App() {
+//   return <Projects />;
+// }
 
-export default App;
+// export default App;
