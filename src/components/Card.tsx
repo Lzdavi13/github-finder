@@ -12,7 +12,7 @@ export function Card({
 }: UserProps) {
   return (
     <>
-      <div className="flex flex-col items-center w-96 h-sp1 bg-zinc-800 border-blue-600 border-2 p-8 gap-4 rounded-lg">
+      <div className="flex flex-col items-center w-96 h-sp1 bg-zinc-800 border-blue-600 border-2 p-8 gap-4 rounded-lg sm:w-80">
         <div className="rounded-full w-32 h-32 border-4 border-blue-900">
           <img
             className="rounded-full border-4 border-blue-900"

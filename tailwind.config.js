@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: "481px",
-        md: "991px",
-        lg: "1200",
+        sm: { max: "481px" },
+        md: { max: "991px" },
+        lg: { max: "1200" },
       },
       backgroundColor: {
         bg1: "rgba(0, 0, 0, 0.463)",

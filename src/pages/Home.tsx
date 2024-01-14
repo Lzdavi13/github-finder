@@ -38,7 +38,7 @@ export function Home() {
   }
   return (
     <>
-      <div className="w-full h-screen bg-zinc-900 flex flex-col gap-16 items-center">
+      <div className="w-full h-screen bg-zinc-900 flex flex-col gap-16 items-center ">
         <Search getUser={getUser} />
         <Main user={user} error={error} />
         {isLoading && <Loader />}

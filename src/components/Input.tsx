@@ -30,7 +30,7 @@ export function InputSearch({ getUser }: InputSearchProps) {
         <input
           onChange={(e) => setUserName(e.target.value)}
           id="search"
-          className="w-sp1 py-3 outline-none px-14 font-f2 text-slate-100 text-lg bg-zinc-700 rounded-md placeholder:text-zinc-500"
+          className="w-sp1 py-3 outline-none px-14 font-f2 text-slate-100 text-lg bg-zinc-700 rounded-md placeholder:text-zinc-500 sm:w-80"
           type="text"
           placeholder="Digite um usuário"
         />
