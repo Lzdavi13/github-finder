@@ -9,7 +9,7 @@ type MainProps = {
 export function Main({ user, error }: MainProps) {
   return (
     <>
-      <main className=" bg-zinc-900 flex flex-col justify-center items-center sm:w-screen sm:pb-14">
+      <main className=" bg-zinc-900 flex flex-col justify-center items-center sm:w-screen sm:pb-14 md:h-screen lg:h-screen lg:justify-start">
         {user && <Card {...user} />}
         {error && <Error />}
       </main>

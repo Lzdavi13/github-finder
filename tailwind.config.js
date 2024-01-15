@@ -6,7 +6,7 @@ export default {
       screens: {
         sm: { max: "481px" },
         md: { max: "991px" },
-        lg: { max: "1200" },
+        lg: { max: "1290px" },
       },
       backgroundColor: {
         bg1: "rgba(0, 0, 0, 0.463)",
