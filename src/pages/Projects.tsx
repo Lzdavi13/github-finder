@@ -6,7 +6,7 @@ import { Repositories } from "../components/Repositories";
 export function Projects() {
   return (
     <>
-      <div className="w-full h-screen bg-zinc-900 flex flex-col gap-16 items-center sm:w-screen sm:h-full">
+      <div className="w-full h-screen bg-zinc-900 flex flex-col gap-16 items-center sm:w-screen sm:h-full md:h-auto md:pb-14">
         <Header>
           <Link to={"/"}>
             <img
