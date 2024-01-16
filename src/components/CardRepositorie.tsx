@@ -6,7 +6,7 @@ type CardRepositorieProps = {
 
 export function CardRepositorie({ repositorieData }: CardRepositorieProps) {
   return (
-    <div className="flex flex-col gap-4 w-96 border-[1px] border-slate-500 h-32 p-4 rounded-md sm:w-80 sm:h-auto">
+    <div className="flex flex-col gap-4 w-[450px] border-[1px] border-slate-500 h-32 p-4 rounded-md sm:w-80 sm:h-auto">
       <div className="flex items-center gap-3 sm:flex-wrap">
         <svg
           stroke="currentColor"
@@ -25,6 +25,7 @@ export function CardRepositorie({ repositorieData }: CardRepositorieProps) {
           <a
             className="no-underline text-base text-justify text-nowrap text-ellipsis sm:text-wrap"
             href={repositorieData.html_url}
+            target="_blank"
           >
             {repositorieData.name}
           </a>
