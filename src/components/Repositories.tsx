@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { useUser } from "../hooks/useUser";
 import { CardRepositorie } from "./CardRepositorie";
@@ -6,7 +6,7 @@ import { Loader } from "./Loader";
 
 export function Repositories() {
   const { user } = useUser();
-  const [repositories, setRepositories] = useState<AxiosResponse[]>([]);
+  const [repositories, setRepositories] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   async function getRepositories() {
