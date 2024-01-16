@@ -6,8 +6,8 @@ type CardRepositorieProps = {
 
 export function CardRepositorie({ repositorieData }: CardRepositorieProps) {
   return (
-    <div className="flex flex-col gap-4 w-96 border-[1px] border-slate-500 h-32 p-4 rounded-md">
-      <div className="flex items-center gap-3">
+    <div className="flex flex-col gap-4 w-96 border-[1px] border-slate-500 h-32 p-4 rounded-md sm:w-80 sm:h-auto">
+      <div className="flex items-center gap-3 sm:flex-wrap">
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -23,7 +23,7 @@ export function CardRepositorie({ repositorieData }: CardRepositorieProps) {
 
         <p className="text-blue-700 hover:underline">
           <a
-            className="no-underline text-base text-justify text-nowrap text-ellipsis"
+            className="no-underline text-base text-justify text-nowrap text-ellipsis sm:text-wrap"
             href={repositorieData.html_url}
           >
             {repositorieData.name}

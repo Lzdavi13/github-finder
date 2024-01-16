@@ -32,7 +32,7 @@ export function Repositories() {
 
   return (
     <>
-      <div className="flex justify-center items-center flex-wrap w-2/4 gap-10 px-6 py-4">
+      <div className="flex justify-center w-2/4 items-center flex-wrap gap-10 px-6 py-4 sm:py-2 sm:gap-5">
         {isLoading && <Loader />}
         {repositories.map((repositorie, indice) => {
           return (
